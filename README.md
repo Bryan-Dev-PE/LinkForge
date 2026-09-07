@@ -250,10 +250,10 @@ flowchart LR
     IP --> H1[HMAC-SHA256 with ANALYTICS_PEPPER]
     UA --> UAP[ua-parser-js]
     UAP --> D[device / browser / OS]
-    Ref --> N[normalized domain or "direct"]
+    Ref --> N[normalized domain or direct]
     IP --> GEO[geoip-lite]
     GEO --> G[country / region / city]
-    H1 --> DB[(arches only, 24-hex hash)]
+    H1 --> DB[(hashes only, 24-hex hash)]
     D --> DB
     N --> DB
     G --> DB
